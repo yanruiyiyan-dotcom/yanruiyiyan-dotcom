@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个精装房</title>
+    <title>[1997年]销售冠军的个人主页</title>
     
     <style>
-        /* 给整个页面（身体）涂上颜色 */
+        /* 全局样式 */
         body {
-            background-color: #f0f8ff; /* 这是一个淡蓝色 */
-            font-family: "微软雅黑", sans-serif; /* 换个好看的字体 */
-            text-align: center; /* 让所有东西居中 */
+            background-color: #f0f8ff;
+            font-family: "微软雅黑", sans-serif;
+            text-align: center;
+            /* 这一行是为了去掉网页默认的白边，让导航栏紧贴顶部 */
+            margin: 0; 
         }
 
-        /* 给大标题化妆 */
+        /* --- ⬇️ 新增的导航栏样式 ⬇️ --- */
+        .nav-box {
+            background-color: #333; /* 深灰色底 */
+            padding: 15px;          /* 内边距 */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 加一点点阴影 */
+        }
+
+        .nav-box a {
+            color: white;
+            text-decoration: none;  /* 去掉下划线 */
+            margin: 0 20px;         /* 左右间距 */
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;       /* 丝滑动画开关 */
+        }
+
+        /* 鼠标悬停时的特效 */
+        .nav-box a:hover {
+            color: #ffdd59;         /* 变黄色 */
+            text-shadow: 0 0 5px white; /* 发个光 */
+        }
+        /* --- ⬆️ 导航栏样式结束 ⬆️ --- */
+
         h1 {
-            color: #ff6b6b; /* 标题变成珊瑚红 */
-            margin-top: 100px; /* 离房顶远一点 */
+            color: #ff6b6b;
+            margin-top: 50px;
         }
 
-        /* 简单的动画：让文字动起来 */
         .dong-qi-lai {
             font-size: 20px;
-            color: #333;
-            animation: move 2s infinite alternate; /* 让它像心跳一样动 */
+            color: #555;
+            animation: move 2s infinite alternate;
         }
 
-        /* 定义动画的规则 */
         @keyframes move {
             from { transform: scale(1); }
-            to { transform: scale(1.3); }
+            to { transform: scale(1.05); }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Welcome to Mr.Spamton's On Sale!</h1>
+    <div class="nav-box">
+        <a href="#">🏠 首页</a>
+        <a href="https://github.com" target="_blank">🛠️ GitHub</a>
+        <a href="#">📚 笔记</a>
+        <a href="#">👋 关于</a>
+    </div>
 
-    <p class="dong-qi-lai">[限时特卖]准备中...</p>
+    <h1>欢迎来到我的数字领地！</h1>
 
-    <a href="https://www.bilibili.com" target="_blank">
-    去[连接已屏蔽]摸会儿鱼 🐟
-</a>
+    <p class="dong-qi-lai">这里正在施工中，敬请期待...</p>
 
+    <img src="me.jpg" alt="我的头像" width="150" style="border-radius: 50%; margin-top: 20px;">
+    
 </body>
 </html>
