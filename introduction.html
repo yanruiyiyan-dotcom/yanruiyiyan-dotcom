@@ -14,15 +14,49 @@
             color: rgb(89, 0, 255);
             font-size: 20px;
         }
-        /* --- ⬇️ 新增：PDF 容器样式 ⬇️ --- */
-        .pdf-container
+        details
  {
-            margin: 30px auto;     /* 上下30px间距，左右自动居中 */
-            width: 80%;            /* 宽度占屏幕的80% */
-            height: 500px;         /* 高度固定500像素 */
-            border: 2px solid #fff;/* 加个白边框好看点 */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 加点阴影有立体感 */
-        }
+        background-color: #ffffff
+;
+        border-radius: 8px
+;
+        padding: 10px
+;
+        margin: 20px
+ auto;
+        width: 85%
+;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1
+);
+        cursor: pointer; /* 鼠标放上去变小手 */
+        transition: all 0.3s
+ ease;
+    }
+
+    details[open]
+ {
+        padding-bottom: 20px
+;
+    }
+
+    summary
+ {
+        font-size: 22px
+;
+        font-weight
+: bold;
+        color: #5900ff
+;
+        outline: none; /* 去掉点击时的蓝色外框 */
+        list-style: none; /* 去掉自带的黑色小三角 */
+    }
+
+    /* 自定义一个小图标，点击时可以旋转 */
+    summary::before
+ {
+        content: "📄 "
+;
+    }
 
         /* --- ⬇️ 新增：下载按钮样式 ⬇️ --- */
         .download-btn
@@ -49,6 +83,20 @@
             transform: scale(1.05); /* 鼠标放上去稍微放大一点 */
         }
     </style>
+    <details>
+    <summary>点击阅览：[1997年销售冠军] 核心秘籍.pdf</summary>
+    
+    <div style="margin-top: 15px;">
+        <p style="font-size: 14px; color: #666;">内容加载中，请稍候...</p>
+        
+        <iframe 
+            src="first_word_to_everybody.pdf" 
+            class="pdf-container" 
+            style="width: 100%; height: 600px; border: none;">
+            您的浏览器不支持在线预览。
+        </iframe>
+    </div>
+</details>
 </head>
 <body>
     <h1>📚 [日记][大事件记录][里程碑]，未来将应有尽有！</h1>
