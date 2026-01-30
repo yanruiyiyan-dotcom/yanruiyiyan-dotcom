@@ -14,11 +14,59 @@
             color: rgb(89, 0, 255);
             font-size: 20px;
         }
+        /* --- ⬇️ 新增：PDF 容器样式 ⬇️ --- */
+        .pdf-container
+ {
+            margin: 30px auto;     /* 上下30px间距，左右自动居中 */
+            width: 80%;            /* 宽度占屏幕的80% */
+            height: 500px;         /* 高度固定500像素 */
+            border: 2px solid #fff;/* 加个白边框好看点 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 加点阴影有立体感 */
+        }
+
+        /* --- ⬇️ 新增：下载按钮样式 ⬇️ --- */
+        .download-btn
+ {
+            background-color: #ff6b6b
+;
+            color
+: white;
+            padding: 10px 20px
+;
+            text-decoration
+: none;
+            border-radius: 5px
+;
+            font-weight
+: bold;
+            transition: 0.3s
+;
+        }
+        .download-btn:hover
+ {
+            background-color: #ff4757
+;
+            transform: scale(1.05); /* 鼠标放上去稍微放大一点 */
+        }
     </style>
 </head>
 <body>
     <h1>📚 [日记][大事件记录][里程碑]，未来将应有尽有！</h1>
     <p>[原材料]准备中，点我成为“大人物”！</p>
+    
+    <hr>
+
+    <h2>第一篇[新鲜出炉]的邮件</h2>
+    <p>你可以直接在下方阅读</p>
+    <iframe src="first_word_to_everybody.pdf" class="pdf-container">
+        您的浏览器不支持在线预览 PDF，请点击下方按钮下载查看。
+    </iframe>
+
+    <br>
+
+    <a href="first_word_to_everybody.tex" class="download-btn" download>📥 下载 .tex 源代码</a>
+    
+    <br><br>
     <hr>
     <a href="index.html" class="back-btn">⬅️ 返回首页</a>
 </body>
